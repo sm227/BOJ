@@ -41,7 +41,7 @@ public class _1110 {
 
 			newNum = Integer.parseInt(tempNum);
 			count += 1;
-			if (num == newNum) break; 
+			if (num == newNum) break;  
 		}
 		System.out.println(count);
 	}
