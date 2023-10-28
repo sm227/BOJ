@@ -1,5 +1,3 @@
-import java.awt.datatransfer.FlavorEvent;
-import java.util.Collection;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.*;
@@ -11,6 +9,8 @@ public class _1546 {
 
         Scanner sc = new Scanner(System.in);
         subject = sc.nextInt();
+       
+        
 
         for(int i =0; i<subject; i++) {
             score.add(sc.nextInt());
@@ -36,6 +36,7 @@ public class _1546 {
             result = sum / subject;
         }
         System.out.println(result);
+        sc.close();
 
     }
 }
