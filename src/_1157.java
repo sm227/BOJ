@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class _1157 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 
 		String str = sc.next();
@@ -31,6 +30,7 @@ public class _1157 {
 				
 			}
 			if (count <= num) {
+				// TODO 같은 문자열 발생시 비교 문제 해결
 				if(result != temp && count == num) result = "?";
 				count = num;
 				result = temp;
