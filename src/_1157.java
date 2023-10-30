@@ -17,7 +17,7 @@ public class _1157 {
 
 		
 		// 검사
-		for (int i = 0; i < str.length(); i++) {
+		for (int i = 0; i < str.length(); i++) { 
 			int num = 0;
 			
 			String temp = arr[i];
