@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.*;
 
 public class _1546 {
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         int subject ;
         ArrayList<Integer> score = new ArrayList<Integer>();
 
