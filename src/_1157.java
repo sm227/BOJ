@@ -5,12 +5,12 @@ public class _1157 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		String str = sc.next();
-		str = str.toLowerCase();
-		String[] arr = str.split("");
+		String str = sc.next(); // 문자열 입력
+		str = str.toLowerCase(); // 소문자 변환
+		String[] arr = str.split(""); // 배열에 저장
 
-		String result="";
-		int count = 0;
+		String result=""; // 결과 값 초기화
+		int count = 0; // 횟수 저장
 		
 		
 
@@ -31,11 +31,11 @@ public class _1157 {
 			}
 			if (count <= num) {
 				// TODO 같은 문자열 발생시 비교 문제 해결
-				if(result != temp && count == num) result = "?";
+
 				count = num;
 				result = temp;
 			}
-			else if (!result.equals(temp) && count == num) {
+			if (!result.equals(temp) && count == num) {
 				result = "?";
 			}
 			
