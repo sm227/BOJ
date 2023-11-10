@@ -41,7 +41,7 @@ public class _1157 {
 			
 		}
 		result = result.toUpperCase();
-		System.out.println(result); 
+		System.out.println(result);   
 	}
 
 }
