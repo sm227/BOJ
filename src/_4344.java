@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class _4344 {
@@ -7,17 +8,29 @@ public class _4344 {
 
         int caseNum = sc.nextInt();
 
+        int[] score; // 점수 저장할 배열 선언
+        for (int i = 0; i < caseNum; i++) {
+            int sn = sc.nextInt(); // 학생 수 입력
+            score = new int[sn]; // 학생 수 만큼 점수 배열 초기화
 
-
-        for(int i=1; i<caseNum; i++) {
-
-
-            String inputNum = sc.nextLine();
-            String [] tempNum = (inputNum.split("\\s"));
-            int count = Integer.parseInt(tempNum[0]);
-            int[] finalNum = new int[count];
-            finalNum[i-1] =  Integer.parseInt(tempNum[i]);
-            System.out.println(finalNum[i-1]);
+            int sum = 0;
+            // 점수 입력 받아 배열에 저장하기
+            double avg = 0;
+            for (int j = 0; j < sn; j++) {
+                score[j] = sc.nextInt();
+                sum += score[j]; // 학생들의 총 점
+                avg = sum / sn;
+                int count = 0;
+                for(int k = 1; k < score.length; k++) { // 평균보다 높은 값 찾기
+                    if(score[k] > avg) {
+                        // 퍼센트 계산
+                        System.out.println(score[k]);
+                        count +=1;
+                    }
+                }
+                double result = (count / sn) * 100;
+                System.out.println(result);
+            }
         }
     }
 }
