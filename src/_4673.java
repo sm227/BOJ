@@ -4,6 +4,7 @@ public class _4673 {
     public static void main(String[] args) {
         int n;
         ArrayList<Integer> selfNum = new ArrayList<>();
+        ArrayList<Integer> resultList = new ArrayList<>();
         // 셀프 넘버 구하는 법 : 생성자로 만들어지지 않는 모든 수.
 
         for (int i = 0; i < 9968; i++) {
@@ -11,16 +12,17 @@ public class _4673 {
             selfNum.add(a);
 //            System.out.println(a);
         }
-        for (int i = 0; i < selfNum.size(); i++) {
-            int temp = selfNum.get(i);
-            for(i=0; i<10000; i++) {
-                if(temp==i){
-                    break;
-                }
-                else System.out.println(i);
-            }
+        for (int i=0; i<=10000; i++) {
+            resultList.add(i);
 
         }
+//        System.out.println(resultList);
+        for(int i=0; i < selfNum.size(); i++) {
+            int a = resultList.get(i);
+//            System.out.println(a);
+//            resultList.remove(Integer.valueOf(selfNum.get(i)));
+        }
+        System.out.println(selfNum);
 
     }
 
@@ -36,5 +38,4 @@ public class _4673 {
         }
         return result;
     }
-
 }
