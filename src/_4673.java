@@ -11,13 +11,15 @@ public class _4673 {
             selfNum.add(a);
 //            System.out.println(a);
         }
-        for(int i=0; i< selfNum.size(); i++){
-            if(selfNum.get(i) == i) {
-                System.out.println(true);
+        for (int i = 0; i < selfNum.size(); i++) {
+            int temp = selfNum.get(i);
+            for(i=0; i<10000; i++) {
+                if(temp==i){
+                    break;
+                }
+                else System.out.println(i);
             }
-            else {
-                System.out.println(i);
-            }
+
         }
 
     }
