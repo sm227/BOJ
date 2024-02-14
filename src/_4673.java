@@ -5,25 +5,29 @@ public class _4673 {
         int n;
         ArrayList<Integer> selfNum = new ArrayList<>();
         ArrayList<Integer> resultList = new ArrayList<>();
-        // 셀프 넘버 구하는 법 : 생성자로 만들어지지 않는 모든 수.
-
-        for (int i = 0; i < 9968; i++) {
+        for (int i = 0; i < 9980; i++) {
             int a = d(i);
-            selfNum.add(a);
-//            System.out.println(a);
+            if (a < 10000) {
+                selfNum.add(a);
+            }
         }
-        for (int i=0; i<=10000; i++) {
+        for (int i = 1; i < 10000; i++) {
             resultList.add(i);
 
         }
-//        System.out.println(resultList);
-        for(int i=0; i < selfNum.size(); i++) {
-            int a = resultList.get(i);
-//            System.out.println(a);
-//            resultList.remove(Integer.valueOf(selfNum.get(i)));
-        }
-        System.out.println(selfNum);
+        for (int i = 0; i < selfNum.size(); i++) {
+            int a = selfNum.get(i);
+            ;
+            for (int j = 0; j < resultList.size(); j++) {
+                if (a == resultList.get(j)) {
+                    resultList.remove(Integer.valueOf(selfNum.get(i)));
+                }
+            }
 
+        }
+        for (int i = 0; i < resultList.size(); i++) {
+            System.out.println(resultList.get(i));
+        }
     }
 
     static int d(int num) {
